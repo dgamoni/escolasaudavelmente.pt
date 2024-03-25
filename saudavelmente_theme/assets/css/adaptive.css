@@ -115,6 +115,9 @@ div.netgo_navigation ul#menu-mobil-header-menu ul li {
 	#footer-menu-mobil div.netgo_navigation {
 	    margin-bottom: 0px;
 	}
+	.page .button-wrap {
+	    display:none;
+	}
 }
 
 @media screen and (max-width: 544px) {

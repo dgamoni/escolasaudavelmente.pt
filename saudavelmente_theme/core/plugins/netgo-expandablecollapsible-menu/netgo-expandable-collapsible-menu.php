@@ -102,7 +102,7 @@ class Netgo_Navigation extends WP_Widget {
 
 	// outputs the content of the widget
 	function widget($args, $instance) {
-		//var_dump($args);
+
 		
 		$widget_id = "netgo_navigation_" . $args["widget_id"];
 		$widget_id_for_js = str_replace("-", "", $widget_id);

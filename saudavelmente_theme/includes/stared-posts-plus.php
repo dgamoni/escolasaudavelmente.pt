@@ -14,6 +14,7 @@ if( have_rows('gal_started_posts_options') ): ?>
 				$gal_started_posts_options_summary = get_sub_field('gal_started_posts_options_summary');
 				$gal_started_posts_options_linktext = get_sub_field('gal_started_posts_options_linktext');
 				$gal_started_posts_options_url = get_sub_field('gal_started_posts_options_url');
+                                $gal_started_posts_options_url_link = get_the_permalink ($gal_started_posts_options_url );
 				?>
 				<div class="col-md-6 stared_posts-block-col">
 					<div class="flex-xl-middle stared_posts-content">
@@ -21,7 +22,7 @@ if( have_rows('gal_started_posts_options') ): ?>
 				            <h3><?php echo $gal_started_posts_options_title; ?></h3>
 				            <p><?php echo $gal_started_posts_options_summary; ?></p>
 				            <?php if ($gal_started_posts_options_linktext) : ?>
-				        		<a href="<?php echo $gal_started_posts_options_url; ?>" class="btn btn-link">[ <?php echo $gal_started_posts_options_linktext; ?> ]</a>
+				        		<a href="<?php echo $gal_started_posts_options_url_link; ?>" class="btn btn-link">[ <?php echo $gal_started_posts_options_linktext; ?> ]</a>
 				        	<?php endif; ?>
 				        	<img class="stared_posts-image w-100" src="<?php echo bfi_thumb( $gal_started_posts_options_image, $params_news_img  ); ?>">
 			        	<!-- </div> -->

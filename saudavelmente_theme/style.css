@@ -107,11 +107,9 @@ a:focus, a:hover {
   background: url('assets/img/menu-01.svg') no-repeat;
   /*background: url('assets/img/sprite.png') no-repeat;*/
   /*background-position: -179px 0px;*/
-  width: 78px;
-  height: 78px;
-  display: flex;
-
-}
+  width: 68px;
+  height: 68px;
+  display: flex;}@media screen and (max-width: 500px) {.mobil-menu-icon {  width: 45px;  height: 45px;}}
 #menu-header-menu {
   margin: 0;
 }
@@ -497,7 +495,38 @@ padding: 0;
 	font-size: 13px;
 }
 
-/*fix v3 dgamoni*/
-/*.submenu_crincas {
-  margin-left: 322px;
-}*/
+.sub_alunos {
+    /*margin-left: 366px;*/
+	margin-left: 96px;
+}
+.sub_derctor {
+    margin-left: 236px;
+}
+
+@media screen and (max-width: 768px) {
+	div.netgo_navigation ul > li> a {
+		word-break: break-word;
+    		display: inline-block;
+	}
+}
+.mobileon div.netgo_navigation ul:first-child > li > a {
+    padding-right: 35px;
+}
+.mobileoff div.netgo_navigation ul:first-child > li > a {
+    padding-right: 35px;
+    display: inline-block;
+}
+
+.pdf-link {
+    background: #ff7900;
+    color: #ffffff;
+    border: 0;
+    font-family: 'GothamRounded-Bold';
+    padding: 15px 25px 15px 25px;
+    font-size: 14px;
+}
+.pdf-link:hover {
+    cursor: pointer;
+    background: #787878!important;
+color: #ffffff;
+}

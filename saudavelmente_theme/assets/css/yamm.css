@@ -26,7 +26,8 @@
 	margin: 0;
 	border: none;
 	background-color: #f5fbfb;
-	text-align: center;/*fix v3 dgamoni*/
+	/*text-align: center;*/
+        text-align: center;/*fix v3 dgamoni*/
 }
 .custom-offset {
 	margin-left: 37.9999%;
