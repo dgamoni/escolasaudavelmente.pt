@@ -34,8 +34,17 @@ div.netgo_navigation ul#menu-mobil-header-menu ul li {
 	div.netgo_navigation li.menu-item-has-children:before {
 	    right: 20px !important;
 	}
-	.stared_posts-content {
+    .stared_posts-content {
 	    min-height: 280px;
+	}
+	#related_posts .stared_posts-content {
+	    height: 100%;
+	    width:90%;
+	    max-width: inherit;
+	}
+	#related_posts .stared_posts-content p {
+	      font-size: 17px;
+        line-height: 1;  
 	}
 }
 
@@ -44,6 +53,9 @@ div.netgo_navigation ul#menu-mobil-header-menu ul li {
 	.stared_posts-content {
 	    min-height: 233px;
 	}
+		#related_posts .col-lg-5 {
+        padding-bottom:5px;
+    }
 } 
 
 @media screen and (max-width: 768px) {
@@ -118,6 +130,21 @@ div.netgo_navigation ul#menu-mobil-header-menu ul li {
 	.page .button-wrap {
 	    display:none;
 	}
+	.single .button-wrap {
+	    display:none;
+	}
+	.related_title h2 {
+        border-top: none;
+    }
+	#related_posts .col-lg-5 {
+        padding-bottom:5px;
+    }
+    #related_posts .stared_posts-content {
+        width: 90%;
+    }
+    .single .page-content {
+        margin-bottom: 0px;
+    }
 }
 
 @media screen and (max-width: 544px) {

@@ -12,6 +12,15 @@ function sidebar_init()
         'after_title' => '</h3>',
     ));
     register_sidebar(array(
+        'name' => 'Left sidebar Mobil',
+        'id' => 'left-sidebar-mobil',
+        'description' => 'Left sidebar for mobil',
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+    register_sidebar(array(
         'name' => 'Mobil header menu',
         'id' => 'mobil_header_menu',
         'description' => 'Mobil header menu',

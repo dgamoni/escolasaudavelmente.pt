@@ -278,7 +278,11 @@ home*/
   justify-content: center;
   background-repeat: no-repeat;
 }
-
+	#related_posts .stared_posts-content {
+	    height: 100%;
+	    width:100%;
+	        max-width: 470px;
+	}
 .stared_posts-content * {
   z-index: 1;
 }

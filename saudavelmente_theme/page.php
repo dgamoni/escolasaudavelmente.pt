@@ -10,7 +10,7 @@
 						$productcategories = wp_get_object_terms($post->ID, 'page_category');
 						$term_id = $productcategories[0]->term_id;
 						$enable_custom_left_sidebar_menu = get_field('enable_custom_left_sidebar_menu', 'page_category' . '_' . $term_id);
-
+   
 	        			if($enable_custom_left_sidebar_menu) {
 	        				
 	        				$custom_left_sidebar = get_field('custom_left_sidebar', 'page_category' . '_' . $term_id);
@@ -68,12 +68,12 @@
 	        	</div>
 	        	
 	        	<div class="col-md-7 mobileon mobil-sidebar">
-       		    <?php 
+       		<?php 
 	        			// fix v3 
 						$productcategories = wp_get_object_terms($post->ID, 'page_category');
 						$term_id = $productcategories[0]->term_id;
 						$enable_custom_left_sidebar_menu = get_field('enable_custom_left_sidebar_menu', 'page_category' . '_' . $term_id);
-
+   
 	        			if($enable_custom_left_sidebar_menu) {
 	        				
 	        				$custom_left_sidebar = get_field('custom_left_sidebar', 'page_category' . '_' . $term_id);
@@ -94,11 +94,10 @@
 		        			$nav = new Netgo_Navigation();
 		        			$nav->widget($argg, $instance_);
 		        		} else { 
-		        			get_sidebar('left');
+		        			get_sidebar('leftmobil');
 		        		}
 		        		// end fix
 	        		 ?>
-	        		<?php //get_sidebar('left'); ?>
 	        	</div>
 	        </div>
         </div>

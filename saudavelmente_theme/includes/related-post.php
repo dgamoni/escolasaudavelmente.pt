@@ -35,22 +35,26 @@ if( $posts ): ?>
     <div id="related_posts">
 		<div class="container">
 			<div class="row">
-	            <div class="col-md-1">
+	            <div class="col-lg-1">
                 </div>
-				<div class="col-md-10 related_title">
+				<div class="col-lg-10 related_title">
 	            	<h2>Artigos relacionados</h2>
 	            </div>
-	            <div class="col-md-1">
+	            <div class="col-lg-1">
                 </div>
 
-	            <div class="col-md-1">
+	            <div class="col-lg-1">
                 </div>
 			    <?php foreach( $posts as $post): ?>
 			        <?php setup_postdata($post); ?>
 			        
-			        <div class="col-md-5">
+			        <div class="col-lg-5">
 				       <?php $thumb_url =  wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
-
+                        <?php 
+                        if(!$thumb_url) {
+                            $thumb_url = get_template_directory_uri().'/assets/img/470_210_gray2.png';
+                        }
+                        ?>
 				        	<!-- <div class="flex-xl-middle stared_posts-content" style="background-image: url(<?php echo bfi_thumb( $thumb_url, $params_news_img  ); ?>);"> -->
 				        	<div class="flex-xl-middle related_posts-wrap">
 				        		
@@ -73,7 +77,7 @@ if( $posts ): ?>
 			            
 			        
 			    <?php endforeach; ?>
-			    <div class="col-md-1">
+			    <div class="col-lg-1">
                 </div>
 			</div>
 		</div>

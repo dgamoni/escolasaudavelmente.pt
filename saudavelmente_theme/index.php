@@ -39,6 +39,40 @@
             <div class="col-md-1">
             </div>
           </div> <!-- end row -->
+          
+          <div class="col-md-7 mobileon mobil-sidebar">
+              <?php
+  	        			// fix v3 
+				$productcategories = wp_get_object_terms($post->ID, 'page_category');
+				$term_id = $productcategories[0]->term_id;
+				$enable_custom_left_sidebar_menu = get_field('enable_custom_left_sidebar_menu', 'page_category' . '_' . $term_id);
+
+    			if($enable_custom_left_sidebar_menu) {
+    				
+    				$custom_left_sidebar = get_field('custom_left_sidebar', 'page_category' . '_' . $term_id);
+        			$instance_ = array('title' => '' ,'function' => $custom_left_sidebar->name );
+        			$widget_id = "netgo_navigation-".$custom_left_sidebar->ID;
+        			$argg = array(
+        				'name'  => "Left sidebar",
+        				'id'	=> "left-sidebar",
+        				'description' => "Left sidebar",
+        				'class'		=> "",
+        				'before_widget'=> "",
+        				'after_widget'=> "",
+        				'after_title'=> "",
+        				'widget_id' => $widget_id,
+        				'widget_name' => "Netgo Expandable/Collapsible Menu"
+        			);
+
+        			$nav = new Netgo_Navigation();
+        			$nav->widget($argg, $instance_);
+        		} else { 
+        			get_sidebar('leftmobil');
+        		}
+        		// end fix
+              ?>
+              <?php //get_sidebar('left'); ?>
+          </div>
 
           <?php get_template_part( 'includes/related-post' ); ?>
           
